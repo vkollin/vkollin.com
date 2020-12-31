@@ -1,0 +1,17 @@
+@import "../common";
+
+.Tag {
+    color:       $blueLight;
+    display:     inline-block;
+    font-size:   .85em;
+    font-weight: 300;
+    margin:      0 5px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

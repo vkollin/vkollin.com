@@ -1,0 +1,32 @@
+[
+  {
+    "from": "2007/10",
+    "company": "Check24",
+    "location": "Berlin",
+    "logo": "check24",
+    "position": "Full Stack Developer",
+    "skills": [
+      "php",
+      "python",
+      "react",
+      "mysql",
+      "elasticsearch",
+      "symfony"
+    ]
+  },
+  {
+    "from": "2016/01",
+    "to": "2017/09",
+    "company": "momox GmbH",
+    "logo": "momox",
+    "location": "Berlin",
+    "position": "Full Stack Developer",
+    "skills": [
+      "php",
+      "mysql",
+      "jquery",
+      "oxid",
+      "elasticsearch"
+    ]
+  }
+]

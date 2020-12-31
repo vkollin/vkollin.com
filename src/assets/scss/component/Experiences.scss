@@ -5,7 +5,7 @@
     position: relative;
 
     &::before {
-        background: rgb(155, 155, 155);
+        background: $blueLight;
         bottom:     0;
         content:    "";
         position:   absolute;
@@ -15,28 +15,41 @@
 }
 
 .ExperienceWrapper {
-    $spaceBetweenLineAndContent: 16px;
+    $spaceBetweenLineAndContent: 20px;
     $bubbleSize:                 4px;
-    $bubbleBorderSize:           16px;
+    $bubbleBorderSize:           8px;
 
+    margin-bottom:               30px;
     margin-left:                 $spaceBetweenLineAndContent;
     position:                    relative;
 
     &::before {
-        background:    $fontColor;
+        background:    $blue;
         border:        $bubbleBorderSize solid $backgroundColor;
         border-radius: $bubbleSize + $bubbleBorderSize;
         content:       "";
         height:        $bubbleSize;
         left:          ($spaceBetweenLineAndContent + $bubbleBorderSize + 1)*-1;
         position:      absolute;
-        top:           calc(50% - #{$bubbleSize / 2} - #{$bubbleBorderSize});
+        top:           calc(#{($bubbleSize/2 + $bubbleBorderSize/2) * -1} + .25rem);
         width:         $bubbleSize;
     }
 }
 
 .Experience {
-    padding: 15px;
+    display: flex;
+
+    .Experience-Text {
+        width: 100%;
+    }
+
+    .Experience-Image {
+        flex: 1 1 0;
+
+        img {
+            width: 70px;
+        }
+    }
 
     span {
         margin: 5px 0;
@@ -62,5 +75,10 @@
         color:       $fontColorLight;
         display:     block;
         font-weight: 400;
+    }
+
+    .Experience-Tags {
+        margin-top: 5px;
+        width:      100%;
     }
 }

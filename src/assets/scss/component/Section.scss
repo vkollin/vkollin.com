@@ -2,8 +2,17 @@
 
 .Section {
     @include container;
+    margin-bottom: 5em;
 
     h1 {
-        width: 100%;
+        border-bottom:       1px solid;
+        border-image-slice:  1;
+        border-image-source: linear-gradient(to left, $backgroundColor, $orangeLight, $orange);
+        color:               $blueLight;
+        font-size:           1.75em;
+
+        font-weight:         300;
+        line-height:         .8;
+        width:               100%;
     }
 }

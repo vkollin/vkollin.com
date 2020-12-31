@@ -10,17 +10,20 @@ const imageminMozjpeg = require('imagemin-mozjpeg')
 
 const isDevelopment = true
 
+let outputDir = path.resolve(__dirname, '../dist');
+let assetsDir = path.join(__dirname, '/assets');
+
 const config = {
     mode: isDevelopment ? 'development' : 'production',
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx', '.css', '.scss'],
     },
     entry: {
-        index: path.join(__dirname, 'assets/index.jsx')
+        index: path.join(assetsDir, "index.jsx")
     },
 
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: outputDir,
         filename: '[name].[fullhash].js'
     },
     plugins: [
