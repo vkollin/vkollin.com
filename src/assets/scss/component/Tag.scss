@@ -1,11 +1,11 @@
 @import "../common";
 
 .Tag {
-    color:       $blueLight;
+    color:       $fontColorLight;
     display:     inline-block;
     font-size:   .85em;
     font-weight: 300;
-    margin:      0 5px;
+    margin:      0 2px;
 
     &:first-child {
         margin-left: 0;

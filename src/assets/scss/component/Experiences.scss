@@ -24,7 +24,7 @@
     position:                    relative;
 
     &::before {
-        background:    $blue;
+        background:    $orange;
         border:        $bubbleBorderSize solid $backgroundColor;
         border-radius: $bubbleSize + $bubbleBorderSize;
         content:       "";
@@ -64,17 +64,19 @@
     }
 
     .Experience-Position {
-        display: block;
+        display:     block;
+        font-weight: 400;
+        color:       $blue;
     }
 
     .Experience-Company {
-
+        font-weight: 300;
     }
 
     .Experience-Dates {
-        color:       $fontColorLight;
         display:     block;
         font-weight: 400;
+        color:       $fontColorLight;
     }
 
     .Experience-Tags {
