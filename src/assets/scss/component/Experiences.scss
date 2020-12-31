@@ -1,0 +1,66 @@
+@import "../common";
+
+.Experiences {
+    padding:  10px 0;
+    position: relative;
+
+    &::before {
+        background: rgb(155, 155, 155);
+        bottom:     0;
+        content:    "";
+        position:   absolute;
+        top:        0;
+        width:      .25px;
+    }
+}
+
+.ExperienceWrapper {
+    $spaceBetweenLineAndContent: 16px;
+    $bubbleSize:                 4px;
+    $bubbleBorderSize:           16px;
+
+    margin-left:                 $spaceBetweenLineAndContent;
+    position:                    relative;
+
+    &::before {
+        background:    $fontColor;
+        border:        $bubbleBorderSize solid $backgroundColor;
+        border-radius: $bubbleSize + $bubbleBorderSize;
+        content:       "";
+        height:        $bubbleSize;
+        left:          ($spaceBetweenLineAndContent + $bubbleBorderSize + 1)*-1;
+        position:      absolute;
+        top:           calc(50% - #{$bubbleSize / 2} - #{$bubbleBorderSize});
+        width:         $bubbleSize;
+    }
+}
+
+.Experience {
+    padding: 15px;
+
+    span {
+        margin: 5px 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .Experience-Position {
+        display: block;
+    }
+
+    .Experience-Company {
+
+    }
+
+    .Experience-Dates {
+        color:       $fontColorLight;
+        display:     block;
+        font-weight: 400;
+    }
+}

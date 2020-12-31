@@ -1,0 +1,9 @@
+@import "../common";
+
+.Section {
+    @include container;
+
+    h1 {
+        width: 100%;
+    }
+}

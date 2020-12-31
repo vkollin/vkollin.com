@@ -1,0 +1,24 @@
+@import "../common";
+
+.Skills {
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: space-between;
+    margin:          0 -5px;
+}
+
+.SkillWrapper {
+    padding: 5px;
+    width:   5em;
+}
+
+.Skill {
+    @include boxShadow;
+    @include square;
+    align-items:     center;
+    background:      #fff;
+    border-radius:   .75em;
+    display:         flex;
+    justify-content: center;
+    width:           100%;
+}

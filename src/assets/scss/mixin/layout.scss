@@ -1,0 +1,13 @@
+@mixin container {
+    max-width: 32vw;
+    min-width: 320px;
+    margin:    0 auto;
+}
+
+@mixin square() {
+    &::after {
+        content:        "";
+        display:        block;
+        padding-bottom: 100%;
+    }
+}

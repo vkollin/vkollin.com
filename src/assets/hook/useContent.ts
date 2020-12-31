@@ -1,8 +1,10 @@
 import {ContentService} from "../service/ContentService";
 import {useEffect, useState} from "react";
+import {SkillType} from "../factory/SkillFactory";
 
 type UseContentReturnType = {
-    [key: string]: string
+    "skills.json"?: SkillType[],
+    "index.md"?: string
 };
 
 export const useContent = (files: string[]): [UseContentReturnType, boolean] => {
