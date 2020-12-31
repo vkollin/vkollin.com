@@ -1,5 +1,15 @@
 import React from 'react';
+import {useContent} from "../hook/useContent";
+import {Markdown} from "../component/Markdown";
 
 export const Index = (): JSX.Element => {
-    return <div>Moin</div>
+
+    const [content, isLoading] = useContent(['index.md'])
+
+    if (isLoading) {
+        return <div>...</div>;
+    }
+
+    return <Markdown markdown={content['index.md']}/>
 }
+
