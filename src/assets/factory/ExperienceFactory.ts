@@ -1,8 +1,8 @@
 import {Experience} from "../model/Experience";
 // @ts-ignore
-import check24 from '../image/check24.jpg';
+import check24 from '../image/experience/check24.jpg';
 // @ts-ignore
-import momox from '../image/momox.jpg';
+import momox from '../image/experience/momox.jpg';
 
 export type ExperienceType = {
     from: string,
