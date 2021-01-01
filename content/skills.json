@@ -12,6 +12,17 @@
       "logo": "python"
     },
     {
+      "title": "SCSS",
+      "group": "language",
+      "logo": "sass"
+    },
+    {
+      "title": "Javascript",
+      "subtitle": "es6",
+      "group": "language",
+      "logo": "javascript"
+    },
+    {
       "title": "MySQL",
       "group": "service",
       "logo": "mysql"
@@ -22,9 +33,24 @@
       "logo": "symfony"
     },
     {
+      "title": "React",
+      "group": "framework",
+      "logo": "react"
+    },
+    {
       "title": "Elasticsearch",
       "group": "service",
       "logo": "elasticsearch"
+    },
+    {
+      "title": "nginx",
+      "group": "service",
+      "logo": "nginx"
+    },
+    {
+      "title": "git",
+      "group": "service",
+      "logo": "git"
     }
   ],
   "groups": {
