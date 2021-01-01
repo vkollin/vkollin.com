@@ -16,7 +16,7 @@
 .Skill {
     $gutter:         10px;
 
-    @include boxShadow;
+    @include boxShadow(2);
     align-items:     center;
     background:      #fff;
     border-radius:   .75em;
