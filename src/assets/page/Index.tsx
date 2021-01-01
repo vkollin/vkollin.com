@@ -6,16 +6,14 @@ import {ExperienceFactory} from "../factory/ExperienceFactory";
 import {Experiences} from "../component/Experiences";
 
 export const Index = (): JSX.Element => {
-
-    // const [content, isLoading] = useContent(['index.md', 'skills.json'])
-    const [content, isLoading] = useContent(['index.md'])
+    const [content, isLoading] = useContent(['skills.json', 'experiences.json'])
 
     if (isLoading) {
         return <div>...</div>;
     }
 
-    const skillGroups = SkillFactory.createFromRaw(require('../../../content/skills.json'))
-    const experiences = ExperienceFactory.createFromRaw(require('../../../content/experiences.json'))
+    const skillGroups = SkillFactory.createFromRaw(content['skills.json'])
+    const experiences = ExperienceFactory.createFromRaw(content['experiences.json'])
 
     return <div>
         <SkillGroups groups={skillGroups}/>
