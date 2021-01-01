@@ -11,6 +11,7 @@ export type SkillsType = {
         title: string,
         group: string,
         subtitle?: string,
+        confidence?: number,
         logo?: string,
     }[]
 }
@@ -40,7 +41,7 @@ export class SkillFactory {
                 logo = logos[item.logo]
             }
 
-            const skill = new Skill(item.title, item.subtitle, logo);
+            const skill = new Skill(item.title, item.subtitle, logo, item.confidence);
 
             if (item.group in groups) {
                 groups[item.group].addSkill(skill)

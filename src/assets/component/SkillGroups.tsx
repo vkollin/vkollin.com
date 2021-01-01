@@ -26,6 +26,20 @@ const Skill = (props: { skill: SkillModel }): JSX.Element => {
         <div className={"Skill"}>
             <div className="ImageWrapper">{props.skill.logo && <Image src={props.skill.logo}/>}</div>
             <span>{props.skill.title}</span>
+            <Confidence score={props.skill.confidence}/>
         </div>
+    </div>
+}
+
+const Confidence = (props: { score?: number }) => {
+    if (!props.score && props.score !== 0) {
+        return <div className={"Confidence"}/>
+    }
+
+    const confidenceScore = props.score * 10;
+
+    return <div className={"Confidence"}>
+        <div className={"Confidence-Total"}/>
+        <div className={"Confidence-My"} style={{width: `${confidenceScore}%`}}/>
     </div>
 }

@@ -14,7 +14,7 @@ export class Group {
 }
 
 export class Skill {
-    constructor(readonly title: string, readonly subtitle?: string, readonly logo?: string) {
+    constructor(readonly title: string, readonly subtitle?: string, readonly logo?: string, readonly confidence?: number) {
 
     }
 }
