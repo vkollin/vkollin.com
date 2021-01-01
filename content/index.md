@@ -1,5 +1,3 @@
-# Vincent Kollin
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut hendrerit nisi. Pellentesque tempor sodales dolor, id gravida tortor. Nam auctor ultricies lectus, vitae consequat elit efficitur ac. Aliquam ac massa justo. Donec nec ligula quam. Morbi euismod erat non nulla rhoncus imperdiet. Curabitur interdum ex eu rhoncus convallis. Vestibulum elementum ante augue, ut tristique ex tristique id.
 
 Duis vitae ipsum dui. In tellus augue, aliquam sed sem a, pellentesque finibus nisi. Morbi ultrices, lorem eu elementum consectetur, nibh lectus interdum ante, a tristique purus sem vel metus. Curabitur ullamcorper, libero non gravida rutrum, sem nisl blandit erat, sed pellentesque leo augue et massa. Pellentesque sit amet magna congue, congue dui sed, varius sapien. Morbi urna sem, varius at tortor vel, condimentum feugiat dui. Sed eu hendrerit lectus, a gravida arcu. In hac habitasse platea dictumst. Integer mollis eros dui, eget tempus eros iaculis sit amet. In convallis velit eget elit ultrices sagittis. Vestibulum sed pulvinar odio. Vestibulum finibus eu dui nec ultricies.
