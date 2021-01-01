@@ -1,12 +1,12 @@
 import React from "react";
 
 type PropsType = {
-    title: string,
+    title?: string,
     className?: string,
     children: JSX.Element | JSX.Element[]
 }
 
-export class Section extends React.Component<PropsType> {
+export class Section extends React.Component<PropsType, null> {
     render() {
         let className = "Section";
 
@@ -15,7 +15,7 @@ export class Section extends React.Component<PropsType> {
         }
 
         return <section className={className}>
-            <h1>{this.props.title}</h1>
+            {this.props.title && <h1>{this.props.title}</h1>}
             {this.props.children}
         </section>
     }

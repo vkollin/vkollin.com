@@ -6,3 +6,9 @@ export const LoadableCVPage = (): JSX.Element => {
 
     return <Component/>;
 };
+
+export const LoadableIndexPage = (): JSX.Element => {
+    const Component = loadable(() => import('./page/Index'), {resolveComponent: mod => mod.Index});
+
+    return <Component/>;
+};

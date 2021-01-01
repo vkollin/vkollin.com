@@ -94,7 +94,7 @@ module.exports = (env, argv) => {
 
     if (isDevelopment) {
         config.devtool = 'eval-cheap-source-map';
-        config.devServer = {contentBase: path.join(__dirname, 'dist'), port: 3000, hot: true}
+        config.devServer = {contentBase: path.join(__dirname, 'dist'), port: 3000, hot: true, historyApiFallback: true,}
     }
 
     return config;

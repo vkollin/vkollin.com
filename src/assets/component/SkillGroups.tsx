@@ -9,7 +9,7 @@ export const SkillGroups = (props: { groups: Group[] }): JSX.Element => {
 
     for (const group of props.groups) {
         for (const skill of group.skills) {
-            renderedSkills.push(<Skill skill={skill}/>)
+            renderedSkills.push(<Skill key={JSON.stringify(skill)} skill={skill}/>)
         }
     }
 
