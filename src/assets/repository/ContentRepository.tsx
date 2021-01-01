@@ -3,7 +3,7 @@ import {AxiosResponse} from "axios";
 
 export class ContentRepository extends BaseRepository {
 
-    getContentFromGithub = (files: string[]): Promise<{ [key: string]: string }> => {
+    getContentFromGithub = (files: string[]): Promise<{ [_: string]: string }> => {
         const promises: Promise<AxiosResponse<string>>[] = [];
 
         for (const file of files) {
@@ -13,7 +13,7 @@ export class ContentRepository extends BaseRepository {
         return new Promise(((resolve, reject) => {
             Promise.allSettled(promises)
                 .then((settledResults) => {
-                        const content = {} as { [key: string]: string };
+                        const content = {} as { [_: string]: string };
 
                         for (const r of settledResults) {
                             if (r.status === 'fulfilled') {

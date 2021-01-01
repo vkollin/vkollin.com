@@ -1,22 +1,41 @@
-[
-  {
-    "title": "PHP",
-    "subtitle": "PHP7"
-  },
-  {
-    "title": "PHP1",
-    "subtitle": "PHP7"
-  },
-  {
-    "title": "PHP2",
-    "subtitle": "PHP7"
-  },
-  {
-    "title": "PHP3",
-    "subtitle": "PHP7"
-  },
-  {
-    "title": "PHP4",
-    "subtitle": "PHP7"
+{
+  "items": [
+    {
+      "title": "PHP",
+      "group": "language",
+      "subtitle": "PHP7",
+      "logo": "php"
+    },
+    {
+      "title": "python",
+      "group": "language",
+      "logo": "python"
+    },
+    {
+      "title": "MySQL",
+      "group": "service",
+      "logo": "mysql"
+    },
+    {
+      "title": "Symfony",
+      "group": "framework",
+      "logo": "symfony"
+    },
+    {
+      "title": "Elasticsearch",
+      "group": "service",
+      "logo": "elasticsearch"
+    }
+  ],
+  "groups": {
+    "language": {
+      "title": "Language"
+    },
+    "service": {
+      "title": "Service"
+    },
+    "framework": {
+      "title": "Framework"
+    }
   }
-]
+}

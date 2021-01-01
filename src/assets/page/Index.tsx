@@ -1,7 +1,7 @@
 import React from 'react';
 import {useContent} from "../hook/useContent";
 import {SkillFactory} from "../factory/SkillFactory";
-import {Skills} from "../component/Skills";
+import {SkillGroups} from "../component/SkillGroups";
 import {ExperienceFactory} from "../factory/ExperienceFactory";
 import {Experiences} from "../component/Experiences";
 
@@ -14,11 +14,11 @@ export const Index = (): JSX.Element => {
         return <div>...</div>;
     }
 
-    const skills = SkillFactory.createFromRaw(require('../../../content/skills.json'))
+    const skillGroups = SkillFactory.createFromRaw(require('../../../content/skills.json'))
     const experiences = ExperienceFactory.createFromRaw(require('../../../content/experiences.json'))
 
     return <div>
-        <Skills skills={skills}/>
+        <SkillGroups groups={skillGroups}/>
         <Experiences experiences={experiences}/>
     </div>
 }

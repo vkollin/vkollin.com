@@ -1,5 +1,7 @@
 import React from "react";
 
 export const Image = (props: { src: string }): JSX.Element => {
-    return <img src={props.src} alt=""/>
+    return <div className={"Image"}>
+        <img src={props.src} alt=""/>
+    </div>
 }

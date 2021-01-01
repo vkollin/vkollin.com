@@ -16,12 +16,12 @@ export class ContentService {
         return `${ContentService.githubApiBaseUrl}/${ContentService.repo}/master/content/`;
     }
 
-    getFiles(files: string[]): Promise<{ [key: string]: string }> {
+    getFiles(files: string[]): Promise<{ [_: string]: string }> {
         return new Promise<{ [p: string]: string }>(((resolve, reject) => {
             this.contentRepository
                 .getContentFromGithub(files.map(f => `${ContentService.getPrefix()}${f}`))
                 .then(response => {
-                    const cleanResponse = {} as { [key: string]: string };
+                    const cleanResponse = {} as { [_: string]: string };
 
                     for (const [filename, markdown] of Object.entries(response)) {
                         const cleanKey = filename.replace(ContentService.getPrefix(), '');

@@ -8,17 +8,39 @@
 }
 
 .SkillWrapper {
-    padding: 5px;
-    width:   5em;
+    padding-top: 25%;
+    position:    relative;
+    width:       25%;
 }
 
 .Skill {
+    $gutter:         10px;
+
     @include boxShadow;
-    @include square;
     align-items:     center;
     background:      #fff;
     border-radius:   .75em;
+    bottom:          $gutter/2;
     display:         flex;
-    justify-content: center;
-    width:           100%;
+    flex-direction:  column;
+    font-size:       .75rem;
+    font-weight:     400;
+    justify-content: space-between;
+    left:            $gutter/2;
+    padding:         $gutter*1.25 $gutter*.75;
+    position:        absolute;
+    right:           $gutter/2;
+    top:             $gutter/2;
+    width:           calc(100% - #{$gutter});
+
+    .Image {
+        display:         flex;
+        justify-content: center;
+
+        img {
+            filter:    grayscale(100%);
+            height:    auto;
+            max-width: 50%;
+        }
+    }
 }

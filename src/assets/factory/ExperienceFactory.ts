@@ -1,8 +1,5 @@
 import {Experience} from "../model/Experience";
-// @ts-ignore
-import check24 from '../image/experience/check24.jpg';
-// @ts-ignore
-import momox from '../image/experience/momox.jpg';
+import {logos} from "../image/experience";
 
 export type ExperienceType = {
     from: string,
@@ -16,11 +13,6 @@ export type ExperienceType = {
 
 export class ExperienceFactory {
     public static createFromRaw(raw?: ExperienceType[]): Experience[] {
-        const logos: { [key: string]: string } = {
-            check24: check24,
-            momox: momox,
-        }
-
         if (!raw) {
             return []
         }

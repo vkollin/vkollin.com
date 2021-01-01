@@ -1,9 +1,9 @@
 import {ContentService} from "../service/ContentService";
 import {useEffect, useState} from "react";
-import {SkillType} from "../factory/SkillFactory";
+import {SkillsType} from "../factory/SkillFactory";
 
 type UseContentReturnType = {
-    "skills.json"?: SkillType[],
+    "skills.json"?: SkillsType[],
     "index.md"?: string
 };
 
