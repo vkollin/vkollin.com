@@ -5,7 +5,7 @@ import {SkillGroups} from "../component/SkillGroups";
 import {ExperienceFactory} from "../factory/ExperienceFactory";
 import {Experiences} from "../component/Experiences";
 
-export const Index = (): JSX.Element => {
+export const CV = (): JSX.Element => {
     const [content, isLoading] = useContent(['skills.json', 'experiences.json'])
 
     if (isLoading) {

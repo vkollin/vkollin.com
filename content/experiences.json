@@ -1,6 +1,6 @@
 [
   {
-    "from": "2007/10",
+    "from": "2017/10",
     "company": "Check24",
     "location": "Berlin",
     "logo": "check24",
@@ -8,10 +8,13 @@
     "skills": [
       "php",
       "python",
+      "scss",
       "react",
+      "es6",
       "mysql",
       "elasticsearch",
-      "symfony"
+      "symfony",
+      "rabbitmq"
     ]
   },
   {
@@ -25,8 +28,24 @@
       "php",
       "mysql",
       "jquery",
+      "scss",
       "oxid",
       "elasticsearch"
+    ]
+  },
+  {
+    "from": "2019/12",
+    "company": "Freelancer",
+    "location": "Berlin",
+    "position": "PHP & Frontend Developer",
+    "skills": [
+      "php",
+      "scss",
+      "jquery",
+      "mysql",
+      "wordpress",
+      "drupal",
+      "symfony"
     ]
   }
 ]
