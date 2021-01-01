@@ -8,7 +8,7 @@ export class Experience {
     static parseDate(input: string): Date {
         const [year, month] = input.split('/')
 
-        return new Date(Date.UTC(Number(year), Number(month)))
+        return new Date(Date.UTC(Number(year), Number(month) - 1))
     }
 
     setFrom(from: string) {
