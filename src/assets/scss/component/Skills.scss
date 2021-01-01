@@ -33,9 +33,19 @@
     top:             $gutter/2;
     width:           calc(100% - #{$gutter});
 
+    .ImageWrapper {
+        width:           100%;
+        height:          100%;
+        display:         flex;
+        justify-content: center;
+        align-items:     center;
+        padding-bottom:  10px;
+    }
+
     .Image {
         display:         flex;
         justify-content: center;
+        align-items:     center;
 
         img {
             filter:    grayscale(100%);
