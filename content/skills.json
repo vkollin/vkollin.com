@@ -33,6 +33,11 @@
       "logo": "symfony"
     },
     {
+      "title": "Laravel",
+      "group": "framework",
+      "logo": "laravel"
+    },
+    {
       "title": "React",
       "group": "framework",
       "logo": "react"
@@ -51,6 +56,16 @@
       "title": "git",
       "group": "service",
       "logo": "git"
+    },
+    {
+      "title": "WordPress",
+      "group": "framework",
+      "logo": "wordpress"
+    },
+    {
+      "title": "Drupal",
+      "group": "framework",
+      "logo": "drupal"
     }
   ],
   "groups": {

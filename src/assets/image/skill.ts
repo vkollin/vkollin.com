@@ -9,4 +9,7 @@ export const logos: { [_: string]: string } = {
     javascript: require('../image/skill/javascript.png').default,
     nginx: require('../image/skill/nginx.png').default,
     sass: require('../image/skill/sass.png').default,
+    drupal: require('../image/skill/drupal.png').default,
+    wordpress: require('../image/skill/wordpress.png').default,
+    laravel: require('../image/skill/laravel.png').default,
 }
