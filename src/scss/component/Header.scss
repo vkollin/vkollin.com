@@ -2,7 +2,7 @@
 
 .Navigation {
     @include boxShadow;
-    background: white;
+    background: $fontColor;
     padding:    5px 10px;
     position:   sticky;
     top:        0;
@@ -22,14 +22,14 @@
             }
 
             a {
-                color:           $fontColor;
+                color:           white;
                 font-size:       1.25em;
                 font-weight:     400;
 
                 text-decoration: none;
 
                 &.selected {
-                    color: $blueLight;
+
                 }
             }
         }

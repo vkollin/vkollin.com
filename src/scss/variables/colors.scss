@@ -1,8 +1,8 @@
-$backgroundColor: rgb(242, 242, 242);
-$fontColor:       rgb(99, 99, 99);
-$fontColorLight:  rgb(142, 142, 142);
+$backgroundColor:  rgb(242, 242, 242);
+$fontColor:        rgb(99, 99, 99);
+$fontColorLight:   rgb(142, 142, 142);
+$fontColorLighter: lighten($fontColorLight, 25%);
 
-$orangeLight:     rgb(255, 142, 0);
-$orange:          rgb(255, 127, 0);
-$blueLight:       rgb(5, 40, 97);
-$blue:            rgb(4, 14, 87);
+
+$red:              rgb(231, 64, 32);
+$blue:             rgb(0, 110, 185);

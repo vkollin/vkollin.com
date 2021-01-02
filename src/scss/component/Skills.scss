@@ -67,17 +67,17 @@
 
     .Confidence-Total,
     .Confidence-My {
-        height:   1px;
+        height:   2px;
         position: absolute;
         width:    100%;
     }
 
     .Confidence-Total {
-        background: $fontColorLight;
+        background: $fontColorLighter;
     }
 
     .Confidence-My {
-        background: $orangeLight;
+        background: linear-gradient(to right, darken($red, 10%), lighten($red, 10%));
         overflow:   hidden;
     }
 }

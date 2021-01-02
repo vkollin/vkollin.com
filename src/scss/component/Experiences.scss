@@ -5,7 +5,7 @@
     position: relative;
 
     &::before {
-        background: $blueLight;
+        background: $fontColorLighter;
         bottom:     0;
         content:    "";
         position:   absolute;
@@ -24,7 +24,7 @@
     position:                    relative;
 
     &::before {
-        background:    $orange;
+        background:    $red;
         border:        $bubbleBorderSize solid $backgroundColor;
         border-radius: $bubbleSize + $bubbleBorderSize;
         content:       "";

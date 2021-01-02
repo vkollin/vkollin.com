@@ -5,13 +5,12 @@
     margin-bottom: 5em;
 
     h1 {
-        border-bottom:       1px solid;
-        border-image-slice:  1;
-        border-image-source: linear-gradient(to left, $backgroundColor, $orangeLight, $orange);
-        color:               $fontColor;
-        font-size:           1.75em;
-        font-weight:         500;
-        line-height:         .8;
-        width:               100%;
+        display:                 inline-block;
+        background:              linear-gradient(to right, $blue, $red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size:               1.75em;
+        font-weight:             700;
+        line-height:             1;
     }
 }
