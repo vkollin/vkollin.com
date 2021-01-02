@@ -20,14 +20,14 @@
     "skipLibCheck": true
   },
   "include": [
-    "./assets/**/*.ts",
-    "./assets/**/*.tsx"
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     "public/build",
-    "assets/**/*.js",
-    "assets/**/*.jsx",
-    "assets/**/*.scss"
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.scss"
   ]
 }

@@ -10,7 +10,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env, argv) => {
     const outputDir = path.resolve(__dirname, '../dist');
-    const assetsDir = path.join(__dirname, '/assets');
+    const assetsDir = path.join(__dirname, '/src');
 
     const isDevelopment = argv.mode === 'development';
 

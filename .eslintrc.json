@@ -51,14 +51,14 @@
   "overrides": [
     {
       "files": [
-        "assets/js/**/*.js",
-        "assets/js/**/*.jsx"
+        "src/js/**/*.js",
+        "src/js/**/*.jsx"
       ]
     },
     {
       "files": [
-        "assets/js/**/*.ts",
-        "assets/js/**/*.ts"
+        "src/js/**/*.ts",
+        "src/js/**/*.ts"
       ],
       "parser": "@typescript-eslint/parser",
       "plugins": [
