@@ -1,0 +1,32 @@
+name: 🚀 Deploy on push to master
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Checkout the repository
+        uses: actions/checkout@master
+
+      - name: 👇 Install Dependencies
+        run: yarn install
+
+      - name: 🌹 Build for production
+        run: yarn run build
+
+      - name: 📂 Sync files
+          uses: SamKirkland/FTP-Deploy-Action@4.0.0
+          with:
+            server: vkollin.com
+            username: webrtzm2r_2nt77k
+            password: ${{ secrets.FTP_SECRET }}
+
+
