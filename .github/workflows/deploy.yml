@@ -28,5 +28,7 @@ jobs:
           server: vkollin.com
           username: webrtzm2r_2nt77k
           password: ${{ secrets.FTP_SECRET }}
+          local-dir: ./dist/
+          server-dir: ./html/vkollin.com/public/
 
 
