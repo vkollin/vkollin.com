@@ -16,7 +16,17 @@ jobs:
       - name: 🚚  Checkout the repository
         uses: actions/checkout@master
 
+      - name: 💾  Cache node_modules
+          uses: actions/cache@v1
+          id: yarn-cache-node-modules
+          with:
+            path: node_modules
+            key: ${{ runner.os }}-yarn-cache-node-modules-${{ hashFiles('**/yarn.lock') }}
+            restore-keys: |
+              ${{ runner.os }}-yarn-cache-node-modules-
+
       - name: 👇  Install Dependencies
+        if: steps.yarn-cache-node-modules.outputs.cache-hit != 'true'
         run: yarn install
 
       - name: 🌹  Build for production
@@ -28,7 +38,7 @@ jobs:
           server: vkollin.com
           username: webrtzm2r_2nt77k
           password: ${{ secrets.FTP_SECRET }}
-          local-dir: ./dist/
-          server-dir: ./html/vkollin.com/public/
+          local-dir: /home/runner/work/vkollin.com/dist
+          server-dir: /html/vkollin.com/public/
 
 
