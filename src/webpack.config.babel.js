@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const autoprefixer = require('autoprefixer')
+const CopyPlugin = require("copy-webpack-plugin");
 
 
 module.exports = (env, argv) => {
@@ -34,6 +35,11 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin({cleanStaleWebpackAssets: !isDevelopment}),
             new HtmlWebpackPlugin({
                 template: path.join(__dirname, 'index.html')
+            }),
+            new CopyPlugin({
+                patterns: [
+                    {from: path.join(assetsDir, '.htaccess'), to: outputDir},
+                ],
             }),
         ],
 
