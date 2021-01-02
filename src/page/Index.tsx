@@ -7,7 +7,7 @@ export const Index = (): JSX.Element => {
     const [content, isLoading] = useContent(['index.md'])
 
     // @ts-ignore
-    return <Section title={'Vincent Kollin'}>
+    return <Section title={'Vincent "Vinny" Kollin'}>
         <Markdown markdown={content["index.md"]}/>
     </Section> as unknown as JSX.Element
 }
