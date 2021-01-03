@@ -1,12 +1,19 @@
 @import "../common";
 
 .Navigation {
-    @include boxShadow;
-    background: $fontColor;
-    padding:    5px 10px;
-    position:   sticky;
+    padding:    15px 10px;
     top:        0;
+    transition: padding ease-out 150ms;
+    width:      100%;
     z-index:    1;
+
+    &.sticky {
+        background: white;
+        @include boxShadow;
+        padding:    5px 10px;
+        position:   fixed;
+        transition: padding ease-in 250ms;
+    }
 
     ul {
         @include disableList;
@@ -20,14 +27,18 @@
             }
 
             a {
-                color:           white;
-                font-size:       1.25em;
-                font-weight:     400;
-
-                text-decoration: none;
+                background:              linear-gradient(to right, $fontColor, $fontColor);
+                -webkit-background-clip: text;
+                font-size:               1.25em;
+                font-weight:             700;
+                text-decoration:         none;
+                -webkit-text-fill-color: transparent;
+                transition:              background ease-in-out 1s;
 
                 &.selected {
-
+                    background:              linear-gradient(to right, $blue, $red);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
         }
