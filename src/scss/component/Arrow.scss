@@ -4,7 +4,10 @@
     $length:         .75;
     $transitionTime: 333ms;
 
+    height:          10px;
     position:        relative;
+    width:           15px;
+    z-index:         1;
 
     &::before,
     &::after {
@@ -13,6 +16,7 @@
         display:    block;
         height:     $length * .2ex;
         position:   absolute;
+        top:        4px;
         transition: left ease-in $transitionTime, transform ease-in-out $transitionTime;
         width:      $length * 1em;
     }
