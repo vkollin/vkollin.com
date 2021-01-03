@@ -58,7 +58,7 @@
     {
       "files": [
         "src/js/**/*.ts",
-        "src/js/**/*.ts"
+        "src/js/**/*.tsx"
       ],
       "parser": "@typescript-eslint/parser",
       "plugins": [
