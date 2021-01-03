@@ -42,7 +42,7 @@ const Experience = (props: { experience: ExperienceModel }): JSX.Element => {
                     <span className={"Experience-Company"}>{experience.company}, {experience.location}</span>
                     <div className={"Experience-Tags"}>{experience.skills?.map(s => <SkillTag tag={s}/>)}</div>
                 </div>
-                <div className={"Experience-Image"}>{experience.image && <Image image={experience.image}/>}</div>
+                {/*<div className={"Experience-Image"}>{experience.image && <Image image={experience.image}/>}</div>*/}
             </div>
             <Highlights highlights={experience.highlights}/>
         </div>

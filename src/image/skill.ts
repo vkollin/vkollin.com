@@ -5,7 +5,6 @@ export const logos: { [_: string]: string } = {
     git: require('../image/skill/git.png').default,
     javascript: require('../image/skill/javascript.png').default,
     laravel: require('../image/skill/laravel.png').default,
-    mysql: require('../image/skill/mysql.png').default,
     nginx: require('../image/skill/nginx.png').default,
     php: require('../image/skill/php.png').default,
     python: require('../image/skill/python.png').default,
