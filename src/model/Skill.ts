@@ -1,3 +1,5 @@
+import {Image} from "./Image";
+
 export class Group {
     constructor(readonly title?: string) {
     }
@@ -14,7 +16,7 @@ export class Group {
 }
 
 export class Skill {
-    constructor(readonly title: string, readonly subtitle?: string, readonly logo?: string, readonly confidence?: number) {
+    constructor(readonly title: string, readonly subtitle?: string, readonly image?: Image, readonly confidence?: number) {
 
     }
 }

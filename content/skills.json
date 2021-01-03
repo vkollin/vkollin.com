@@ -4,87 +4,115 @@
       "title": "Ansible",
       "confidence": 7.5,
       "group": "framework",
-      "logo": "ansible"
+      "image": {
+        "src": "ansible"
+      }
     },
     {
       "title": "PHP",
       "confidence": 9,
       "group": "language",
       "subtitle": "PHP7",
-      "logo": "php"
+      "image": {
+        "src": "php"
+      }
     },
     {
       "title": "python",
       "confidence": 5,
       "group": "language",
-      "logo": "python"
+      "image": {
+        "src": "python"
+      }
     },
     {
       "title": "SCSS",
       "confidence": 9.5,
       "group": "language",
-      "logo": "sass"
+      "image": {
+        "src": "sass"
+      }
     },
     {
       "title": "Javascript",
       "subtitle": "es6",
       "confidence": 8.5,
       "group": "language",
-      "logo": "javascript"
+      "image": {
+        "src": "javascript"
+      }
     },
     {
       "title": "MySQL",
       "confidence": 7,
       "group": "service",
-      "logo": "mysql"
+      "image": {
+        "src": "mysql"
+      }
     },
     {
       "title": "Symfony",
       "confidence": 7,
       "group": "framework",
-      "logo": "symfony"
+      "image": {
+        "src": "symfony"
+      }
     },
     {
       "title": "Laravel",
       "confidence": 5,
       "group": "framework",
-      "logo": "laravel"
+      "image": {
+        "src": "laravel"
+      }
     },
     {
       "title": "React",
       "confidence": 7,
       "group": "framework",
-      "logo": "react"
+      "image": {
+        "src": "react"
+      }
     },
     {
       "title": "Elasticsearch",
       "confidence": 6,
       "group": "service",
-      "logo": "elasticsearch"
+      "image": {
+        "src": "elasticsearch"
+      }
     },
     {
       "title": "nginx",
       "confidence": 4,
       "group": "service",
-      "logo": "nginx"
+      "image": {
+        "src": "nginx"
+      }
     },
     {
       "title": "git",
       "confidence": 5,
       "group": "service",
-      "logo": "git"
+      "image": {
+        "src": "git"
+      }
     },
     {
       "title": "WordPress",
       "confidence": 5,
       "group": "framework",
-      "logo": "wordpress"
+      "image": {
+        "src": "wordpress"
+      }
     },
     {
       "title": "Drupal",
       "confidence": 3,
       "group": "framework",
-      "logo": "drupal"
+      "image": {
+        "src": "drupal"
+      }
     }
   ],
   "groups": {

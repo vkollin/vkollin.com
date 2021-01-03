@@ -1,5 +1,6 @@
 import {Experience} from "../model/Experience";
 import {logos} from "../image/experience";
+import {Image} from "../model/Image";
 
 export type ExperienceType = {
     from: string,
@@ -7,7 +8,10 @@ export type ExperienceType = {
     location: string,
     position: string
     to?: string,
-    logo?: string,
+    image?: {
+        src: string,
+        license?: string
+    },
     skills?: string[],
     highlights?: string[]
 }
@@ -19,13 +23,13 @@ export class ExperienceFactory {
         }
 
         return raw.map(r => {
-            let logo = undefined;
+            let image = undefined;
 
-            if (r.logo && r.logo in logos) {
-                logo = logos[r.logo]
+            if (r.image && r.image.src in logos) {
+                image = new Image(logos[r.image.src], r.image.license)
             }
 
-            const e = new Experience(r.company, r.location, r.position, logo, r.skills, r.highlights)
+            const e = new Experience(r.company, r.location, r.position, image, r.skills, r.highlights)
 
             e.setFrom(r.from)
             if (r.to) {

@@ -24,7 +24,7 @@ const Skill = (props: { skill: SkillModel }): JSX.Element => {
 
     return <div className="SkillWrapper">
         <div className={"Skill"}>
-            <div className="ImageWrapper">{props.skill.logo && <Image src={props.skill.logo}/>}</div>
+            <div className="ImageWrapper">{props.skill.image && <Image image={props.skill.image}/>}</div>
             <span>{props.skill.title}</span>
             <Confidence score={props.skill.confidence}/>
         </div>

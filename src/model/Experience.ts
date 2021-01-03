@@ -1,3 +1,5 @@
+import {Image} from "./Image";
+
 export class Experience {
     from: Date | null = null;
     to: Date | null = null;
@@ -6,7 +8,7 @@ export class Experience {
         readonly company: string,
         readonly location: string,
         readonly position: string,
-        readonly logo?: string,
+        readonly image?: Image,
         readonly skills?: string[],
         readonly highlights?: string[]
     ) {

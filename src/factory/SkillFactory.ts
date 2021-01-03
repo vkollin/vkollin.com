@@ -1,5 +1,6 @@
 import {Group, Skill} from "../model/Skill";
 import {logos} from "../image/skill";
+import {Image} from "../model/Image";
 
 export type SkillsType = {
     groups: {
@@ -12,7 +13,10 @@ export type SkillsType = {
         group: string,
         subtitle?: string,
         confidence?: number,
-        logo?: string,
+        image?: {
+            src: string,
+            license?: string
+        },
     }[]
 }
 
@@ -35,13 +39,13 @@ export class SkillFactory {
         groups[this.OTHER_GROUP_KEY] = new Group()
 
         for (const item of raw.items) {
-            let logo = undefined;
+            let image = undefined;
 
-            if (item.logo && item.logo in logos) {
-                logo = logos[item.logo]
+            if (item.image && item.image.src in logos) {
+                image = new Image(logos[item.image.src], item.image.license)
             }
 
-            const skill = new Skill(item.title, item.subtitle, logo, item.confidence);
+            const skill = new Skill(item.title, item.subtitle, image, item.confidence);
 
             if (item.group in groups) {
                 groups[item.group].addSkill(skill)
