@@ -6,7 +6,7 @@ type PropsType = {
     children: JSX.Element | JSX.Element[]
 }
 
-export class Section extends React.Component<PropsType, null> {
+export class Section extends React.Component<PropsType> {
     render() {
         let className = "Section";
 

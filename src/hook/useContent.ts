@@ -7,6 +7,7 @@ type UseContentReturnType = {
     "skills.json"?: SkillsType,
     "experiences.json"?: ExperienceType[],
     "index.md"?: string
+    "imprint.md"?: string
 };
 
 export const useContent = (files: string[]): [UseContentReturnType, boolean] => {

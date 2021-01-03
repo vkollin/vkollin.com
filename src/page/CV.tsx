@@ -12,8 +12,8 @@ export const CV = (): JSX.Element => {
         return <div>...</div>;
     }
 
-    const skillGroups = SkillFactory.createFromRaw(require('../../content/skills.json'))
-    const experiences = ExperienceFactory.createFromRaw(require('../../content/experiences.json'))
+    const skillGroups = SkillFactory.createFromRaw(content['skills.json'])
+    const experiences = ExperienceFactory.createFromRaw(content['experiences.json'])
 
     return <div>
         <SkillGroups groups={skillGroups}/>
