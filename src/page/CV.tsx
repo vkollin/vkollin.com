@@ -2,7 +2,7 @@ import React from 'react';
 import {SkillFactory} from "../factory/SkillFactory";
 import {SkillGroups} from "../component/SkillGroups";
 import {ExperienceFactory} from "../factory/ExperienceFactory";
-import {Experiences} from "../component/Experiences";
+import {Timeline} from "../component/Timeline";
 
 export const CV = (): JSX.Element => {
     const skillGroups = SkillFactory.createFromRaw(require('../../content/skills.json'))
@@ -10,7 +10,7 @@ export const CV = (): JSX.Element => {
 
     return <div>
         <SkillGroups groups={skillGroups}/>
-        <Experiences experiences={experiences}/>
+        <Timeline experiences={experiences}/>
     </div>
 }
 

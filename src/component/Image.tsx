@@ -3,6 +3,6 @@ import {Image as ImageModel} from "../model/Image";
 
 export const Image = (props: { image: ImageModel }): JSX.Element => {
     return <div className={"Image"}>
-        <img src={props.image.src} alt={props.image.license}/>
+        <img src={props.image.src} alt={props.image.license} title={props.image.license}/>
     </div>
 }

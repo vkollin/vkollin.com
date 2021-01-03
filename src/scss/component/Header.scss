@@ -1,18 +1,23 @@
 @import "../common";
 
 .Navigation {
-    padding:    15px 10px;
-    top:        0;
-    transition: padding ease-out 150ms;
-    width:      100%;
-    z-index:    10;
+    background:    $backgroundColor;
+    border:        0;
+    border-bottom: 1px solid $fontColorLighter;
+    padding:       10px;
+    top:           0;
+    transition:    all ease-out 150ms;
+    width:         100%;
+    z-index:       10;
 
     &.sticky {
-        background: white;
+        background:    white;
         @include boxShadow;
-        padding:    5px 10px;
-        position:   fixed;
-        transition: padding ease-in 250ms;
+        border-bottom: 1px solid transparent;
+        padding:       5px 10px;
+        position:      fixed;
+        transition:    all ease-in 250ms;
+
     }
 
     ul {

@@ -1,16 +1,15 @@
 import React, {useState} from "react";
 import {Experience as ExperienceModel} from "../model/Experience";
 import {Section} from "./Section";
-import {Image} from "./Image";
 import {Arrow, ArrowDirection} from "./Arrow";
 
 
-export const Experiences = (props: { experiences: ExperienceModel[] }): JSX.Element => {
+export const Timeline = (props: { experiences: ExperienceModel[] }): JSX.Element => {
 
     return <Section title={"Experience"}>
         <div className={"Experiences"}>
             {props.experiences.map(
-                (experience) => <Experience key={JSON.stringify(experience)} experience={experience}/>
+                (experience: ExperienceModel) => <Experience key={JSON.stringify(experience)} experience={experience}/>
             )}
         </div>
     </Section>
