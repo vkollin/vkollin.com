@@ -2,7 +2,14 @@ export class Experience {
     from: Date | null = null;
     to: Date | null = null;
 
-    constructor(readonly company: string, readonly location: string, readonly position: string, readonly logo?: string, readonly skills?: string[]) {
+    constructor(
+        readonly company: string,
+        readonly location: string,
+        readonly position: string,
+        readonly logo?: string,
+        readonly skills?: string[],
+        readonly highlights?: string[]
+    ) {
     }
 
     static parseDate(input: string): Date {

@@ -5,12 +5,12 @@
     margin-bottom: 5em;
 
     h1 {
-        display:                 inline-block;
         background:              linear-gradient(to right, $blue, $red);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        display:                 inline-block;
         font-size:               1.75em;
         font-weight:             700;
         line-height:             1;
+        -webkit-text-fill-color: transparent;
     }
 }

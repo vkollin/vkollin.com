@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import {Experience as ExperienceModel} from "../model/Experience";
 import {Section} from "./Section";
 import {Image} from "./Image";
+import {Arrow, ArrowDirection} from "./Arrow";
 
 
 export const Experiences = (props: { experiences: ExperienceModel[] }): JSX.Element => {
@@ -28,21 +29,46 @@ const Experience = (props: { experience: ExperienceModel }): JSX.Element => {
         });
     }
 
+    const experience = props.experience;
+
     return <div className="ExperienceWrapper">
         <div className={"Experience"}>
-            <div className="Experience-Text">
+            <div className="Experience-Main">
+                <div className="Experience-Text">
                 <span className={"Experience-Dates"}>
-                    {renderDate(props.experience.from)} - {renderDate(props.experience.to)}
+                    {renderDate(experience.from)} - {renderDate(experience.to)}
                 </span>
-                <span className={"Experience-Position"}>{props.experience.position}</span>
-                <span className={"Experience-Company"}>{props.experience.company}, {props.experience.location}</span>
-                <div className={"Experience-Tags"}>{props.experience.skills?.map(s => <SkillTag tag={s}/>)}</div>
+                    <span className={"Experience-Position"}>{experience.position}</span>
+                    <span className={"Experience-Company"}>{experience.company}, {experience.location}</span>
+                    <div className={"Experience-Tags"}>{experience.skills?.map(s => <SkillTag tag={s}/>)}</div>
+                </div>
+                <div className={"Experience-Image"}>{experience.logo && <Image src={experience.logo}/>}</div>
             </div>
-            <div className={"Experience-Image"}>{props.experience.logo && <Image src={props.experience.logo}/>}</div>
+            <Highlights highlights={experience.highlights}/>
         </div>
     </div>
 }
 
 const SkillTag = (props: { tag: string }): JSX.Element => {
     return <div className="Tag">{props.tag}</div>
+}
+
+const Highlights = (props: { highlights?: string[] }) => {
+    const [showHighlights, setShowHighlights] = useState(false);
+
+    if (typeof props.highlights === "undefined" || props.highlights.length === 0) {
+        return null
+    }
+
+    return <div className={"Experience-Highlights"}>
+        <ul className={showHighlights ? "Highlights-Show" : undefined}>
+            {props.highlights.map(h => <li>{h}</li>)}
+        </ul>
+        <div
+            className={`Highlights-Toggle`}
+            onClick={() => setShowHighlights(!showHighlights)}
+        >
+            <Arrow direction={showHighlights ? ArrowDirection.UP : ArrowDirection.DOWN}/>
+        </div>
+    </div>
 }

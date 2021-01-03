@@ -1,0 +1,43 @@
+@import "../common";
+
+.Arrow {
+    $length:         .75;
+    $transitionTime: 333ms;
+
+    position:        relative;
+
+    &::before,
+    &::after {
+        background: $fontColor;
+        content:    "";
+        display:    block;
+        height:     $length * .2ex;
+        position:   absolute;
+        transition: left ease-in $transitionTime, transform ease-in-out $transitionTime;
+        width:      $length * 1em;
+    }
+
+    &.down {
+        &::before {
+            left:      sqrt(pow($length, 2) + pow($length, 2)) / 4 * -1em;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            left:      sqrt(pow($length, 2) + pow($length, 2)) / 4 * 1em;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &.up {
+        &::before {
+            left:      sqrt(pow($length, 2) + pow($length, 2)) / 4 * -1em;
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            left:      sqrt(pow($length, 2) + pow($length, 2)) / 4 * 1em;
+            transform: rotate(-135deg);
+        }
+    }
+}

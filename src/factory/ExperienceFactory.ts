@@ -9,6 +9,7 @@ export type ExperienceType = {
     to?: string,
     logo?: string,
     skills?: string[],
+    highlights?: string[]
 }
 
 export class ExperienceFactory {
@@ -24,7 +25,7 @@ export class ExperienceFactory {
                 logo = logos[r.logo]
             }
 
-            const e = new Experience(r.company, r.location, r.position, logo, r.skills)
+            const e = new Experience(r.company, r.location, r.position, logo, r.skills, r.highlights)
 
             e.setFrom(r.from)
             if (r.to) {

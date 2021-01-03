@@ -16,72 +16,95 @@
 
 .ExperienceWrapper {
     $spaceBetweenLineAndContent: 20px;
-    $bubbleSize:                 4px;
     $bubbleBorderSize:           8px;
 
-    margin-bottom:               30px;
+    margin-bottom:               25px;
     margin-left:                 $spaceBetweenLineAndContent;
     position:                    relative;
 
-    &::before {
-        background:    $red;
-        border:        $bubbleBorderSize solid $backgroundColor;
-        border-radius: $bubbleSize + $bubbleBorderSize;
-        content:       "";
-        height:        $bubbleSize;
-        left:          ($spaceBetweenLineAndContent + $bubbleBorderSize + 1)*-1;
-        position:      absolute;
-        top:           calc(#{($bubbleSize/2 + $bubbleBorderSize/2) * -1} + .25rem);
-        width:         $bubbleSize;
-    }
-}
+    @include bubble(
+                    ($spaceBetweenLineAndContent + $bubbleBorderSize + 1)*-1,
+                    calc(#{($_bubbleSize/2 + $bubbleBorderSize/2) * -1} + .25rem),
+                    $red,
+                    $bubbleBorderSize,
+    );
 
-.Experience {
-    display: flex;
-
-    .Experience-Text {
-        width: 100%;
-    }
-
-    .Experience-Image {
-        flex: 1 1 0;
-
-        img {
-            width: 70px;
-        }
-    }
-
-    span {
-        margin: 5px 0;
-
-        &:first-child {
-            margin-top: 0;
+    .Experience {
+        .Experience-Main {
+            display: flex;
         }
 
-        &:last-child {
-            margin-bottom: 0;
+        .Experience-Text {
+            width: 100%;
         }
-    }
 
-    .Experience-Position {
-        color:       $blue;
-        display:     block;
-        font-weight: 400;
-    }
+        .Experience-Image {
+            flex: 1 1 0;
 
-    .Experience-Company {
-        color:       $blue;
-        font-weight: 300;
-    }
+            img {
+                width: 70px;
+            }
+        }
 
-    .Experience-Dates {
-        color:       $fontColorLight;
-        display:     block;
-        font-weight: 400;
-    }
+        span {
+            margin: 5px 0;
 
-    .Experience-Tags {
-        margin-top: 5px;
-        width:      100%;
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .Experience-Position {
+            color:       $blue;
+            display:     block;
+            font-weight: 400;
+        }
+
+        .Experience-Company {
+            color:       $blue;
+            font-weight: 300;
+        }
+
+        .Experience-Dates {
+            color:       $fontColorLight;
+            display:     block;
+            font-weight: 400;
+        }
+
+        .Experience-Tags {
+            margin-top: 5px;
+            width:      100%;
+        }
+
+        .Highlights-Toggle {
+            display:         flex;
+            justify-content: center;
+            width:           100%;
+        }
+
+        .Experience-Highlights {
+            font-size:   1em;
+            font-weight: 300;
+            padding:     10px 0;
+
+            ul {
+                @include customList;
+                display: none;
+                padding: 15px 0;
+
+
+                &.Highlights-Show {
+                    display: block;
+                }
+
+                li {
+                    line-height: 1.25;
+                }
+            }
+        }
     }
 }

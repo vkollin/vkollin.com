@@ -1,3 +1,6 @@
+@import "../variables/colors";
+@import "../variables/sizes";
+
 @mixin boxShadow($level: 1) {
     @if $level == 1 {
         box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
@@ -5,5 +8,37 @@
 
     @if $level == 2 {
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@mixin disableList {
+    list-style: none;
+    margin:     0;
+    padding:    0;
+}
+
+@mixin bubble($offsetLeft, $offsetTop, $color, $borderSize: $_bubbleBorderSize, $borderColor: $backgroundColor, $size: $_bubbleSize) {
+
+    &::before {
+        background:    $color;
+        border:        $borderSize solid $borderColor;
+        border-radius: $size + $borderSize;
+        content:       "";
+        height:        $size;
+        left:          $offsetLeft;
+        position:      absolute;
+        top:           $offsetTop;
+        width:         $size;
+    }
+}
+
+@mixin customList {
+    @include disableList;
+    margin: -7px 0;
+
+    li {
+        @include bubble(-15px, 6px, $fontColorLight);
+        margin:   7px 0 7px 15px;
+        position: relative;
     }
 }
