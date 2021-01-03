@@ -20,11 +20,16 @@
 
     }
 
+    .Navigation-InnerWrapper {
+        @include container;
+    }
+
     ul {
         @include disableList;
+        margin: 0 -10px;
 
         li {
-            padding: 5px;
+            padding: 5px 10px;
 
             &, a {
                 display:    inline-block;

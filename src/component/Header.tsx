@@ -21,9 +21,11 @@ export const Header = (): JSX.Element | null => {
     }, [])
 
     return <nav className={"Navigation"} ref={navRef}>
-        <ul>
-            <li><NavLink to="/" activeClassName="selected" isActive={isRootActive}>Vincent Kollin</NavLink></li>
-            <li><NavLink to="/cv" activeClassName="selected">CV</NavLink></li>
-        </ul>
+        <div className="Navigation-InnerWrapper">
+            <ul>
+                <li><NavLink to="/" activeClassName="selected" isActive={isRootActive}>Vincent Kollin</NavLink></li>
+                <li><NavLink to="/cv" activeClassName="selected">CV</NavLink></li>
+            </ul>
+        </div>
     </nav>
 }
