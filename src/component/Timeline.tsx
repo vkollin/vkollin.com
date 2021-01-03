@@ -39,7 +39,7 @@ const Experience = (props: { experience: ExperienceModel }): JSX.Element => {
                 </span>
                     <span className={"Experience-Position"}>{experience.position}</span>
                     <span className={"Experience-Company"}>{experience.company}, {experience.location}</span>
-                    <div className={"Experience-Tags"}>{experience.skills?.map(s => <SkillTag tag={s}/>)}</div>
+                    <div className={"Experience-Tags"}>{experience.skills?.map(s => <SkillTag key={s} tag={s}/>)}</div>
                 </div>
                 {/*<div className={"Experience-Image"}>{experience.image && <Image image={experience.image}/>}</div>*/}
             </div>
@@ -61,7 +61,7 @@ const Highlights = (props: { highlights?: string[] }) => {
 
     return <div className={"Experience-Highlights"}>
         <ul className={showHighlights ? "Highlights-Show" : undefined}>
-            {props.highlights.map(h => <li>{h}</li>)}
+            {props.highlights.map(h => <li key={h}>{h}</li>)}
         </ul>
         <div
             className={`Highlights-Toggle`}
