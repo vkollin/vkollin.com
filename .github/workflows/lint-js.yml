@@ -1,15 +1,9 @@
-name: 🚀  Deploy on push to master
+name: test
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: push
 
 jobs:
-  deploy:
+  validate:
     name: 🎉  validate
     runs-on: ubuntu-latest
 
